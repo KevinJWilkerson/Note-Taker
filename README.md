@@ -1,4 +1,4 @@
-# Note Take Web App
+# Note Taker Web App
 
 ## Description
 
