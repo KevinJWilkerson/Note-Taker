@@ -6,8 +6,8 @@ const {
   validateNote,
 } = require("../../lib/notes");
 const { notes } = require("../../db/db.json");
-const { sendFile } = require("express/lib/response");
 
+// Get all notes
 router.get("/notes", (req, res) => {
   let results = notes;
   if (req.query) {
@@ -16,6 +16,7 @@ router.get("/notes", (req, res) => {
   res.json(results);
 });
 
+// Find note by ID
 router.get("/notes/:id", (req, res) => {
   const result = findById(req.params.id, notes);
   if (result) {
@@ -25,8 +26,8 @@ router.get("/notes/:id", (req, res) => {
   }
 });
 
+// Create new note
 router.post("/notes", (req, res) => {
-  // set id based on what the next index of the array will be
   req.body.id = notes.length.toString();
 
   if (!validateNote(req.body)) {
@@ -37,6 +38,7 @@ router.post("/notes", (req, res) => {
   }
 });
 
+// Delete note
 router.delete("/notes/:id", (req, res) => {
   const result = req.params.id;
   let filteredResult = notes.filter(function (note) {
