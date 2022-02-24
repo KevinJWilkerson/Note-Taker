@@ -1,4 +1,4 @@
-# Note Take Web App
+# Note Taker Web App
 
 ## Description
 
@@ -6,11 +6,16 @@
 
 ## Table of Contents
 
+- [Screenshot](#Screenshot)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Example](#example)
 - [Contribution Guidelines](#contribution-guidelines)
 - [Questions](#questions)
+
+# Screenshot
+
+![Screenshot](./assets/images/screenshot.png)
 
 # Installation
 
